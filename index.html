@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>webpage5_portf</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<style>
+	/*common*/
+	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+	body{font: 14px "Noto Sans KR","Malgun Gothic",Arial,sans-serif;}
+	.front .main-banner{width: 100%;height: 100vh;background:url(images/main_index.jpg) no-repeat;background-size:cover;position: relative;}
+	.front .main-banner .top{ display: flex;-ms-flex-direction: column;flex-direction: column;-ms-flex-align: center;align-items: center;
+	-ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+	}
+	.front .main-banner .top .main-logo{position: absolute;top: 36%;display: block;background:url(images/common/logo-white.png) 0 0 no-repeat;margin: 0 auto;width: 448px;height: 248px;}
+	.menu_container{width: 100%;height: 0px;background-color: #191619;position: relative;}
+	#bar-wrap{position: absolute;top: 27px;right:20px;width: 40px;}
+	.bar1,.bar2,.bar3{width: 40px;height: 2px;
+		background-color: #fff;
+		margin: 10px 0;
+	}
+	#bar-wrap:hover .bar1,#bar-wrap:hover .bar2,#bar-wrap:hover .bar3{transition:all .3s linear;}
+	#bar-wrap:hover .bar1{width: 10px;height: 2px;background-color: #14b6e4;margin: 10px 0;text-align: right;}
+	#bar-wrap:hover .bar2{width: 20px;height: 2px;background-color: #14b6e4;margin: 10px 0;text-align: right;}
+	#bar-wrap:hover .bar3{width: 30px;height: 2px;background-color: #14b6e4;margin: 10px 0;text-align: right;}
+	.m_txt{color: #fff;}
+	#bar-wrap:hover .m_txt{color: #14b6e4;}
+
+	div.menu_container.fixed{position: fixed;top: 0;left: 0;width: 100%;height: 100px;}
+	div.menu_container.fixed #bar-wrap{position: absolute;top: 27px;}
+
+	/*@media screen {
+		.front .main-banner .top .main-logo{}
+	}*/
+</style>
+<script>
+	$(function(){
+		var $menu = $(".menu_container");
+		var $menuPos = $menu.offset().top;
+
+		$(window).on("scroll",function(){
+			var scrollY = window.pageYOffset;
+			console.log(scrollY);
+			if (scrollY > $menuPos) {$(".menu_container").addClass("fixed");}else{$(".menu_container").removeClass("fixed");}
+		});
+	});
+</script>
+<body>
+	<div class="front">
+		<div class="menu_container">
+			<ul id="bar-wrap">
+				<li class="bar1"></li>
+				<li class="bar2"></li>
+				<li class="bar3"></li>
+				<li class="m_txt">Menu</li>
+			</ul>
+		</div>
+		<div class="main-banner">
+			<div class="top">
+    			<a href="#" class="main-logo"></a>
+  			</div>
+		</div>
+	</div>
+	<header id="header">
+		<div class="gnb-menuWrap">
+			<ul>
+				
+			</ul>
+		</div>
+	</header>
+	<div style="height:1000px;"></div>
+</body>
+</html>

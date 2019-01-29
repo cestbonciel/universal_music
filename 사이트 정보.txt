@@ -1,0 +1,40 @@
+워너 뮤직 그룹
+https://www.warnermusic.co.kr/
+<디자인참조>
+메인메뉴 클릭 효과
+http://www.republicrecords.com/
+메인화면
+.front .main-banner .top {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+플렉스박스 설명
+https://wit.nts-corp.com/2018/07/27/5274
+https://www.virginemirecords.com/
+
+주색상: #191619
+포인트 컬러
+14b6e4
+0fc4f8
+#2AB3E2
+
+어두운블루
+1d353d
+
+헤더영역 
+<메인메뉴>
+Home
+_
+Artist
+Playlist
+News
+Music&Brand
+company
+
