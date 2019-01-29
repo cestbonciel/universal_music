@@ -1,6 +1,18 @@
+http://www.universalmusic.co.kr/
+유니버셜 뮤직그룸
+https://www.universalmusic.com/for-umg-artists/
+유니버셜 뮤직그룸 미국사이트
+-----------------------
 워너 뮤직 그룹
 https://www.warnermusic.co.kr/
 <디자인참조>
+http://kenwheeler.github.io/slick/
+슬릭 슬라이드
+https://themeforest.net/
+엔바토 테마 템플릿 참고 
+https://sir.kr/theme
+그누보드 테마
+https://www.warnermusic.co.kr/
 메인메뉴 클릭 효과
 http://www.republicrecords.com/
 메인화면
@@ -19,6 +31,7 @@ http://www.republicrecords.com/
 https://wit.nts-corp.com/2018/07/27/5274
 https://www.virginemirecords.com/
 
+---------------------------------------
 주색상: #191619
 포인트 컬러
 14b6e4
@@ -37,4 +50,6 @@ Playlist
 News
 Music&Brand
 company
-
+;
+센치한 날 나혼자 듣기 좋은 몽환적인 노래
+시크하고 도시적인 감각이 필요할 때
