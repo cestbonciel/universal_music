@@ -16,31 +16,37 @@
 	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 	body{font: 14px "Noto Sans KR","Malgun Gothic",Arial,sans-serif;}
 	.front .main-banner{width: 100%;height: 100vh;background:url(images/main_index.jpg) no-repeat;background-size:cover;position: relative;}
-	.front .main-banner .top{ display: flex;-ms-flex-direction: column;flex-direction: column;-ms-flex-align: center;align-items: center;
-	-ms-flex-pack: center;
-    justify-content: center;
+	.front .main-banner .top{
     width: 100%;
     height: 80%;
 	}
-	.front .main-banner .top .main-logo{position: absolute;top: 38%;display: block;background:url(images/common/logo-white.png) 0 0 no-repeat;margin: 0 auto;width: 448px;height: 248px;}
+	.front .main-banner .top .main-logo{position: absolute;top: 38%;display: block;background:url(images/common/logo-white.png) 0 0 no-repeat;left: 50%;width: 448px;height: 248px;transform:translate(-50%,-6%);}
 	.menu_container{width: 100%;height: 0px;background-color: #191619;position: relative;}
-	#bar-wrap{position: absolute;top: 27px;right:20px;width: 40px;}
-	.bar1,.bar2,.bar3{width: 40px;height: 2px;
-		background-color: #fff;
-		margin: 10px 0;
-	}
-	#bar-wrap:hover .bar1,#bar-wrap:hover .bar2,#bar-wrap:hover .bar3{transition:all .3s linear;}
-	#bar-wrap:hover .bar1{width: 10px;height: 2px;background-color: #14b6e4;margin: 10px 0;text-align: right;}
-	#bar-wrap:hover .bar2{width: 20px;height: 2px;background-color: #14b6e4;margin: 10px 0;text-align: right;}
-	#bar-wrap:hover .bar3{width: 30px;height: 2px;background-color: #14b6e4;margin: 10px 0;text-align: right;}
-	.m_txt{color: #fff;}
+	.menu_container .b_leftSide{position: relative;}
+	.menu_container .b_leftSide a{position: absolute;top: 5px;left: 20px;}
+	/*메뉴바*/
+
+	.b_rightSide{position: absolute;right: 20px;top: 4px;}
+	#bar-wrap{position: relative;width: 70px;height: 76px;cursor:pointer;}
+	.bar1,.bar2,.bar3{width: 40px;height: 2px;background-color: #fff;position: absolute;transition:.3s linear;}
+	.bar1{top: 6px;left: 5px;}
+	.bar2{top: 20px;left: 5px;}
+	.bar3{top: 34px;left: 5px;}
+	.m_txt{position: absolute;top: 43px;left: 10px;color: #fff;}
+
+	#bar-wrap:hover .bar1{left: 30px;width: 15px;background-color: #14b6e4;}
+	#bar-wrap:hover .bar2{left: 20px;width: 25px;background-color: #14b6e4;}
+
+	#bar-wrap:hover .bar3{background-color: #14b6e4;}
 	#bar-wrap:hover .m_txt{color: #14b6e4;}
 
-	div.menu_container.fixed{position: fixed;top: 0;left: 0;width: 100%;height: 100px;}
-	div.menu_container.fixed #bar-wrap{position: absolute;top: 27px;}
+	div.menu_container.fixed{position: fixed;top: 0;left: 0;width: 100%;height: 70px;z-index:100;}
+	
+	.front .second-banner{width: 100%;height: 100vh;background:url(images/company_bg.jpg) no-repeat;background-size:cover;position: relative;background-attachment:fixed;}
+	.second_txt p{font-size: 2em;text-align: center;color: #fff;position:absolute;top: 50%;left: 50%;transform:translate(-50%,-50%);}
 
-	/*@media screen {
-		.front .main-banner .top .main-logo{}
+	/*@media screen (max-width: 300px) and (min-width:1900px){
+		.front .main-banner .top .main-logo{left: 50%;transform:translate(-50%,-30%);}
 	}*/
 </style>
 <script>
@@ -51,33 +57,45 @@
 		$(window).on("scroll",function(){
 			var scrollY = window.pageYOffset;
 			console.log(scrollY);
-			if (scrollY > $menuPos) {$(".menu_container").addClass("fixed");}else{$(".menu_container").removeClass("fixed");}
+			if (scrollY > $menuPos) {$(".menu_container").addClass("fixed fadeInDown animated");}else{$(".menu_container").removeClass("fixed fadeInDown animated");}
 		});
 	});
 </script>
 <body>
 	<div class="front">
 		<div class="menu_container">
-			<ul id="bar-wrap">
-				<li class="bar1"></li>
-				<li class="bar2"></li>
-				<li class="bar3"></li>
-				<li class="m_txt">Menu</li>
-			</ul>
+			<div class="b_leftSide"><a href="#"><img src="images/common/mt_logo.png" alt="유니버셜 로고"></a></div>
+			<div class="b_rightSide">
+				<ul id="bar-wrap">
+					<li class="bar1"></li>
+					<li class="bar2"></li>
+					<li class="bar3"></li>
+					<li class="m_txt">Menu</li>
+				</ul>
+			</div>
 		</div>
 		<div class="main-banner">
 			<div class="top">
     			<a href="#" class="main-logo"></a>
   			</div>
 		</div>
+		<div class="second-banner">
+			<div class="second_txt">
+    			<p>우리는 유니버설 뮤직그룹입니다.</p>
+  			</div>
+		</div>
 	</div>
 	<header id="header">
 		<div class="gnb-menuWrap">
-			<ul>
-				
+			<ul class="gnb_menu">
+				<li><a href="#">Artist</a></li>
+				<li><a href="#">Playlist</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">Music&Brand</a></li>
+				<li><a href="#">company</a></li>	
 			</ul>
 		</div>
 	</header>
-	<div style="height:1000px;"></div>
+	<div style="height: 1000px;"></div>
 </body>
 </html>

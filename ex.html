@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>title</title>
+</head>
+<style>
+	.togglemenu{position: absolute;right: 20px;}
+	.box{width: 50px;height: 50px;background-color: #000;position: relative;cursor:pointer;}
+	.bar1,.bar2,.bar3{width: 35px;height: 2px;background-color: #fff;position: absolute;transition: .3s linear;}
+	.bar1{top: 10px;left: 5px;}
+	.bar2{top: 25px;left: 5px;}
+	.bar3{bottom: 10px;left: 5px;}
+
+	.box:hover .bar1{left:30px;width: 10px;background-color: #14b6e4;}
+	.box:hover .bar2{left:20px;width: 20px;background-color: #14b6e4;}
+	.box:hover .bar3{color: #14b6e4;}
+</style>
+<body>
+	<div class="togglemenu">
+		<div class="box">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+	</div>
+</body>
+</html>
