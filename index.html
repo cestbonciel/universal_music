@@ -57,9 +57,15 @@
 		$(window).on("scroll",function(){
 			var scrollY = window.pageYOffset;
 			console.log(scrollY);
-			if (scrollY > $menuPos) {$(".menu_container").addClass("fixed fadeInDown animated");}else{$(".menu_container").removeClass("fixed fadeInDown animated");}
+			if (scrollY > $menuPos) {
+				$(".menu_container").addClass("fixed fadeInDown animated");
+				$(".").addClass("");
+			}else{
+				$(".menu_container").removeClass("fixed fadeInDown animated");
+			}
 		});
 	});
+
 </script>
 <body>
 	<div class="front">
