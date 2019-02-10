@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>title</title>
+</head>
+<script>
+	$(".toggle").click(function(){
+				$(".toggle").hide();
+				$("#main_toggle").animate({right:500});
+				$(".close-but").show();
+			});
+			$(".close-but").click(function(){
+				$(".close-but").hide();
+				$("#main_toggle").animate({right:-750});
+				$(".toggle").show();
+			});
+	/* setInterval(function(){repeat_pulse();},800);	
+     	function repeat_pulse(){
+     	$(".main-banner").removeClass("pulse animated");
+     	$(".main-banner").addClass("pulse animated");
+     	} */
+     	 /*setInterval(function(){Button();},500);
+     	function Button(){
+     	$(".close-but").animate({"top":"2px"},500);
+     	$(".close-but").animate({"top":"8px"},500);
+     }  */  
+</script>
+<style>
+	.menu_container .toggle{}
+	.menu_container .close-but{display: none;position: absolute;right: 28px;top:4px;}
+
+	#main_toggle{display: block;position: fixed; right:500px; _width: 750px; height: 100%; z-index: 100;background-color: #f00;}
+	
+	.toggle_bg{background: #f00;}
+	
+	.newsletter_join{float: left;}
+	.toggle_menu{float: right;position: absolute; width: 200px; height: 100%; left: 25px; top: 250px;}
+
+</style>
+<body>
+	<div id="main_toggle" class="bg-primary clearfix">
+		<div class="toggle_bg">
+			<div class="newsletter_join">
+				<ul>
+					<li><a href="#">LOGIN</a></li>
+					<li><a href="#">JOIN</a></li>
+					<li><a href="#">SHOPPING</a></li>
+				</ul>
+			</div>
+			<nav class="toggle_menu">
+				<ul>
+				  <li><a href="#">Artist</a></li>
+				  <li><a href="#">Playlist</a></li>
+				  <li><a href="#">News</a></li>
+				  <li><a href="#">Music&Brand</a></li>
+				  <li><a href="#">company</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</body>
+</html>

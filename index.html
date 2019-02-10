@@ -17,6 +17,7 @@
 </style>
 <script>
 	$(function(){
+		/*스크롤 상단메뉴*/
 		var $menu = $(".menu_container");
 		var $menuPos = $menu.offset().top;
 
@@ -30,14 +31,29 @@
 				$(".menu_container").removeClass("fixed fadeInDown animated");
 			}
 		});
+		//메뉴 토글
+			
+			$(".toggle").click(function(){
+					$(".toggle").hide();
+					$("#main_toggle").animate({right:0});
+					$(".close-but").show();
+			});
+			$(".close-but").click(function(){
+				$(".close-but").hide();
+				$("#main_toggle").animate({right:-1500});
+				$(".toggle").show();
+			});
+				
+				
+		
 	});
 
 </script>
 <body>
-	<div class="front">
+	<div id="front">
 		<div class="menu_container">
 			<div class="b_leftSide"><a href="#"><img src="images/common/mt_logo.png" alt="유니버셜 로고"></a></div>
-			<div class="b_rightSide">
+			<div class="b_rightSide toggle">
 				<ul id="bar-wrap">
 					<li class="bar1"></li>
 					<li class="bar2"></li>
@@ -45,11 +61,34 @@
 					<li class="m_txt">Menu</li>
 				</ul>
 			</div>
+			<div class="close-but"><img src="images/common/close-btn.png" alt="닫기 버튼"></div>
 		</div>
-		<div class="main-banner">
-			<div class="top">
-    			<a href="#" class="main-logo"></a>
-  			</div>
+		<div id="main_toggle">
+			<div class="toggle_bg">
+				<div class="newsletter_join">
+					<ul>
+						<li><a href="#">LOGIN</a></li>
+						<li><a href="#">JOIN</a></li>
+						<li><a href="#">SHOPPING</a></li>
+					</ul>
+				</div>
+				<nav class="toggle_menu">
+					<ul>
+					  <li><a href="#">Artist</a></li>
+					  <li><a href="#">Playlist</a></li>
+					  <li><a href="#">News</a></li>
+					  <li><a href="#">Music&Brand</a></li>
+					  <li><a href="#">company</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="main-banner pulse animated">
+			<div class="il-wrap">
+				<p class="index-logo">
+				    <a href="#" class="main-logo"></a>
+				</p>
+			</div>
 		</div>
 		<div class="second-banner">
 			<div class="second_txt">
@@ -57,8 +96,8 @@
   			</div>
 		</div>
 	</div>
-	<header id="header">
-		<div class="gnb-menuWrap">
+	<!-- <header id="header">
+		<nav class="gnb-menuWrap">
 			<ul class="gnb_menu">
 				<li><a href="#">Artist</a></li>
 				<li><a href="#">Playlist</a></li>
@@ -66,8 +105,7 @@
 				<li><a href="#">Music&Brand</a></li>
 				<li><a href="#">company</a></li>	
 			</ul>
-		</div>
-	</header>
-	<div style="height: 1000px;"></div>
+		</nav>
+	</header> -->
 </body>
 </html>

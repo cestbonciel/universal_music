@@ -2,13 +2,42 @@
 /*common*/
 	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 	body{font: 14px "Noto Sans KR","Malgun Gothic",Arial,sans-serif;}
-	.front .main-banner{width: 100%;height: 100vh;background:url(../images/main_index.jpg) no-repeat;background-size:cover;position: relative;}
-	.front .main-banner .top{
+	.clearfix:after{content:"";display: block;clear: both;}
+	#front .main-banner{width: 100%;height: 100vh;background:url(../images/main_index.jpg) no-repeat;background-size:cover;position: relative;}
+	#front .main-banner .index-logo{
     width: 100%;
     height: 80%;
 	}
-	.front .main-banner .top{position: absolute;top: 38%;display: block;_background:url(../images/common/index-logo.png) 0 0 no-repeat;left: 50%;width: 442px;height: 168px;transform:translate(-50%,-6%);}
-	.front .main-banner .top .main-logo{position: absolute;background:url(../images/common/index-logo.png) 0 0 no-repeat;width:100%;height:100%;transform:scale(.7);}
+	/*#front .main-banner .il-wrap {display: block;width: 100%;height: 220px;background: url(../images/common/index-bg.jpg) repeat;z-index:100;}*/
+	#front .main-banner .il-wrap .index-logo{position: absolute;top: 38%;display: block;_background:url(../images/common/index-logo.png) 0 0 no-repeat;left: 50%;width: 442px;height: 168px;transform:translate(-50%,-6%);}
+	#front .main-banner .il-wrap .index-logo .main-logo{position: absolute;background:url(../images/common/index-logo.png) 0 0 no-repeat;width:100%;height:100%;transform:scale(.7);}
 	.menu_container{width: 100%;height: 0px;background-color: #191619;position: relative;}
 	.menu_container .b_leftSide{position: relative;}
 	.menu_container .b_leftSide a{position: absolute;top: 5px;left: 20px;}
+
+	/*메뉴바*/
+
+	.b_rightSide{position: absolute;right: 20px;top: 4px;cursor:pointer;}
+	#bar-wrap{position: relative;width: 70px;height: 76px;cursor:pointer;}
+	.bar1,.bar2,.bar3{width: 40px;height: 2px;background-color: #fff;position: absolute;transition:.3s linear;}
+	.bar1{top: 6px;left: 5px;}
+	.bar2{top: 20px;left: 5px;}
+	.bar3{top: 34px;left: 5px;}
+	.m_txt{position: absolute;top: 43px;left: 10px;color: #fff;}
+	#bar-wrap:hover .bar1{left: 30px;width: 15px;background-color: #14b6e4;}
+	#bar-wrap:hover .bar2{left: 20px;width: 25px;background-color: #14b6e4;}
+
+	#bar-wrap:hover .bar3{background-color: #14b6e4;}
+	#bar-wrap:hover .m_txt{color: #14b6e4;}
+
+	div.menu_container.fixed{position: fixed;top: 0;left: 0;width: 100%;height: 70px;z-index:5;}
+	/*toggle menu*/
+	.menu_container .toggle{c}
+	.menu_container .close-but{display: none;position: fixed;right: 28px;top:4px;z-index:10;cursor:pointer;}
+/*	#main_toggle position: fixed; right: -750px; width: 750px; height: 100%; z-index: 3;*/
+	#main_toggle{position: absolute;_position: fixed; right:-1500px;width: 100%; height: 100%; z-index: 5	;background-color: #f00;}
+	
+	.toggle_bg{background: #ddd;width: 1200px;margin: 0 auto;height: 100vh;}
+	
+	.newsletter_join{position: absolute;width: 700px;left: 30px;}
+	.toggle_menu{background-color: pink;right: 0;position: absolute; width: 300px; height: 100%; /*left: 25px; top: 250px;*/}
