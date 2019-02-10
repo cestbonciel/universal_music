@@ -1,0 +1,14 @@
+@charset "utf-8";
+/*common*/
+	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+	body{font: 14px "Noto Sans KR","Malgun Gothic",Arial,sans-serif;}
+	.front .main-banner{width: 100%;height: 100vh;background:url(../images/main_index.jpg) no-repeat;background-size:cover;position: relative;}
+	.front .main-banner .top{
+    width: 100%;
+    height: 80%;
+	}
+	.front .main-banner .top{position: absolute;top: 38%;display: block;_background:url(../images/common/index-logo.png) 0 0 no-repeat;left: 50%;width: 442px;height: 168px;transform:translate(-50%,-6%);}
+	.front .main-banner .top .main-logo{position: absolute;background:url(../images/common/index-logo.png) 0 0 no-repeat;width:100%;height:100%;transform:scale(.7);}
+	.menu_container{width: 100%;height: 0px;background-color: #191619;position: relative;}
+	.menu_container .b_leftSide{position: relative;}
+	.menu_container .b_leftSide a{position: absolute;top: 5px;left: 20px;}
