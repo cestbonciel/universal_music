@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/jquery.fullPage.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>M·A·C</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./js/jquery.fullPage.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script>
+		$(document).ready(function(){
+			// 메인 풀페이지
+			$("#main_page").fullpage({
+				links:["MIRAGE_NOIR","STROBE","PRODUCT","ABOUT_M·A·C"],
+				anchors:["MIRAGE_NOIR","STROBE","PRODUCT","ABOUT_M·A·C"],
+				menu:"#main_menu",
+				'afterLoad': function(anchorLink, index){
+					if(index == 1){
+						$('.main1_txt,.main1_img').addClass('mactive');
+					}else{$('.main1_txt,.main1_img').removeClass('mactive');}
+
+					if(index == 2){
+						$('.main2_txt').addClass('mactive');
+					}else{$('.main2_txt').removeClass('mactive');}
+
+					if(index == 3){
+						$('.main3_txt,.main3_img').addClass('mactive');
+					}else{$('.main3_txt,.main3_img').removeClass('mactive');}
+
+					if(index == 4){
+						$('.main4_txt').addClass('mactive');
+					}else{$('.main4_txt').removeClass('mactive');}
+				}
+				
+			});
+
+			//메뉴 토글
+			$(".toggle").click(function(){
+				$(".toggle").hide();
+				$("#main_toggle").animate({right:0});
+				$(".close").show();
+			});
+			$(".close").click(function(){
+				$(".close").hide();
+				$("#main_toggle").animate({right:-750});
+				$(".toggle").show();
+			});
+
+		 setInterval(function(){Button();},500);
+     function Button(){
+     	$(".close").animate({"top":"45px"},500);
+     	$(".close").animate({"top":"50px"},500);
+     }   
+
+			//제품 호버
+			var m3img=["main03_1","main03_2","main03_3"];
+			var m3hover=["main03_1_over","main03_2_over","main03_3_over"];
+			$(".main3_img>ul>li").hover(function(){
+			$(".main3_img img").eq($(this).index()).attr("src","./img/"+m3hover[$(this).index()]+".jpg");
+			},function(){
+			$(".main3_img img").eq($(this).index()).attr("src","./img/"+m3img[$(this).index()]+".jpg");
+			});
+		});
+	</script>
+</head>
+<body>
+<!-- 상단 고정 메뉴 -->
+<nav id="top">
+<div id="logo">
+	<div class="main_logo">
+	<a href="index.html"><h1><img src="./img/main_logo.png" alt="M·A·C"></h1></a></div>
+	<div class="toggle"><img src="./img/btn_toggle.png" alt="토글 버튼"></div>
+	<div class="close"><img src="./img/btn_close.png" alt="닫기 버튼"></div>
+</div>
+	<ul id="main_menu">
+		<li data-menuanchor="MIRAGE_NOIR"><a href="#MIRAGE_NOIR" id="menu1">
+			<img src="./img/menu_dot.png" alt="메뉴 도트">
+			<div class="mouseon">
+			<p>MIRAGE NOIR</p>
+			<div class="stroke"></div>
+			</div>
+			</a>
+		</li>
+		<li data-menuanchor="STROBE">
+			<a href="#STROBE">
+ 			 <img src="./img/menu_dot.png" alt="메뉴 도트">
+  			 <div class="mouseon">
+			 	<p>STROBE</p>
+			 	<div class="stroke"></div>
+			 </div>
+ 		    </a>
+ 		</li>
+		<li data-menuanchor="PRODUCT">
+			<a href="#PRODUCT"><img src="./img/menu_dot.png" alt="메뉴 도트">
+			<div class="mouseon">
+				<p>PRODUCT</p>
+				<div class="stroke"></div>
+			</div>
+	  		</a>
+	  	</li>
+		<li data-menuanchor="ABOUT_M·A·C">
+			<a href="#ABOUT_M·A·C">
+				<img src="./img/menu_dot.png" alt="메뉴 도트">
+			<div class="mouseon">
+				<p>ABOUT M·A·C</p>
+				<div class="stroke"></div>
+			</div>
+	  		</a>
+	  	</li>
+	</ul>
+</nav>
+
+<!-- 메뉴 토글 -->
+<div id="main_toggle">
+	<div class="toggle_bg"></div>
+	<div class="join">
+		<ul>
+			<li><a href="#">LOGIN</a></li>
+			<li><a href="#">JOIN</a></li>
+			<li><a href="#">SHOPPING</a></li>
+		</ul>
+	</div>
+	<nav class="toggle_menu">
+		<ul>
+			<li><a href="sub1.html">MIRAGE NOIR</a>
+			 <ul>
+			 	<li><a href="sub1.html">EYE</a></li>
+			 	<li><a href="sub1.html">LIP</a></li>
+			 	<li><a href="sub1.html">FACE</a></li>
+			 </ul>
+			<li><a href="sub2.html">STROBE</a>
+			 <ul>
+			 	<li><a href="sub2.html">CREAM</a></li>
+			 	<li><a href="sub2.html">COMPACT</a></li>
+			 	<li><a href="sub2.html">SKINFINISH</a></li>
+			 </ul>
+			</li>
+			<li><a href="sub3.html">PRODUCT</a>
+			 <ul>
+			 	<li><a href="sub3.html">EYE</a></li>
+			 	<li><a href="sub3.html">LIP</a></li>
+			 	<li><a href="sub3.html">FACE</a></li>
+			 </ul>
+			</li>
+			<li><a href="sub4.html">ABOUT M·A·C</a>
+			 <ul>
+			 	<li><a href="sub4.html">M·A·C</a></li>
+			 	<li><a href="sub4.html">VIDEO</a></li>
+			 	<li><a href="sub4.html">#HASHTAG</a></li>
+			 </ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="footer">
+  <ul class="person">
+  	<li><a href="#">개인정보 처리 방침</a></li>
+  	<li><a href="#">이용약관</a></li>
+  </ul>
+  <br>
+	<p>© Make-Up Art Cosmetics. All Worldwide Rights Reserved.</p>
+	<p>서울시 강남구 강남대로 382 (역삼동) 메리츠타워9층, 06232.사업자등록번호: 211-81-71889</p>
+  </div>
+</div>
+
+<!-- 메인 페이지 -->
+<div id="main_page">
+ <!-- 미라지 누와르 -->
+ <div id="page1" class="section pages" data-anchor="MIRAGE_NOIR">
+	 	<div id="move1">
+	 	 <div class="main1_txt"><img src="./img/main01_txt.png" alt="미라지 누와르 설명">
+	 	 <button type="button"><a href="sub1.html">컬렉션 보러가기</a></button></div>
+	 	 <div class="main1_img"><img src="./img/main01_img1.png" alt="미라지 누와르 컬렉션"></div>
+	 	 <span><a href="#STROBE" data-link="STROBE"><img src="./img/btn_scroll.png" alt="스크롤 버튼"></a></span>
+	 	</div>
+ </div>
+ 
+ <!-- 스트롭 -->
+ <div id="page2" class="section pages" data-anchor="STROBE">
+ 	<div id="move2">
+ 	 <div class="main2_txt">
+ 	 <span>STROBE</span>
+ 	 <br>
+ 	 <br>
+ 	 <p>화사하고 윤기 있는 피부를 선사해 많은 사랑을 받는 스트롭 크림의 보다 강력해진 라인업을 만나보세요.</p>
+ 	 <p style="font-size: 20px;">건조한 피부에 자연스러운 광과 수분을 책임질 스트롭 NEW 라인업을 놓치지 마세요.</p>
+ 	 <button type="button"><a href="sub2.html">컬렉션 보러가기</a></button></div>
+ 	 <span><a href="#PRODUCT" data-link="PRODUCT"><img src="./img/btn_scroll.png" alt="스크롤 버튼"></a></span>
+ 	</div>
+ </div>
+
+ <!-- 제품 -->
+ <div id="page3" class="section pages" data-anchor="PRODUCT">
+ 	<div id="move3">
+ 		<div class="main3_txt">
+ 			<p>PRODUCT</p>
+ 			<p>본래 아름다운 당신,<br>그 아름다움을 더욱 빛내줄 맥의 제품들을 소개합니다.</p>
+ 		</div>
+ 		<div class="main3_img">
+ 			<ul>
+ 				<li><a href="sub3.html"><img src="./img/main03_1.jpg" alt="eye"></a></li>
+ 				<li><a href="sub3.html"><img src="./img/main03_2.jpg" alt="lip"></a></li>
+ 				<li><a href="sub3.html"><img src="./img/main03_3.jpg" alt="face"></a></li>
+ 			</ul>
+ 		</div>
+ 	<span><a href="#ABOUT_M·A·C" data-link="ABOUT_M·A·C"><img src="./img/btn_scroll.png" alt="스크롤 버튼"></a></span>
+ 	</div>
+ </div>
+
+ <!-- 맥 소개 -->
+ <div id="page4" class="section pages" data-anchor="ABOUT_M·A·C">
+ 	<div id="move4">
+ 		<div class="main4_txt">
+ 			<img src="./img/main04_txt.png" alt="맥 소개">
+ 			<ul>
+ 				<li><a href="sub4.html">mac소개</a></li>
+ 				<li><a href="sub4.html">동영상</a></li>
+ 				<li><a href="sub4.html">해시태그</a></li>
+ 			</ul>
+ 		</div>
+ 	</div>
+ </div>
+</div>
+</body>
+</html>

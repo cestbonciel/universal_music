@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>ABOUT M·A·C</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script>
+$(document).ready(function(){
+	//메뉴 토글
+	$(".toggle").click(function(){
+		$(".toggle").hide();
+		$("#main_toggle").animate({right:0});
+		$(".close").show();
+	});
+	$(".close").click(function(){
+		$(".close").hide();
+		$("#main_toggle").animate({right:-750});
+		$(".toggle").show();
+	});
+
+	//서브메뉴 탭
+	$(".sub_gnb>li").eq(0).addClass("select");
+	$(".sub_description").eq(0).show();
+	$(".sub_gnb>li").click(function(){
+		$(".sub_gnb>li").removeClass();
+		$(this).addClass("select");
+		$(".sub_description").hide().eq($(this).index()).show();
+	});
+  
+  $(window).scroll(function(){
+  	var sct = $(window).scrollTop();
+  	console.log(sct);
+  	if(sct > 100){
+  		$("#logo").hide();
+  	}
+
+  	if(sct < 200){
+  		$("#logo").show();
+  	}
+
+  	if( $(this).scrollTop() >= 200 ){
+					$("#topBtn").fadeIn();
+				}else{
+					$("#topBtn").fadeOut();}
+				});
+  
+			$("#topBtn").click(function(){
+					$("html,body").animate({scrollTop:0},500);
+
+  })
+
+});
+	</script>
+</head>
+<body>
+<header id="sub_header4">
+<!-- 상단 고정 메뉴 -->
+<div id="sub_top">
+	<div id="logo">
+		<div class="main_logo">
+		<a href="index.html"><h1><img src="./img/main_logo.png" alt="M·A·C"></h1></a></div>
+		<div class="toggle"><img src="./img/btn_toggle.png" alt="토글 버튼"></div>
+		<div class="close"><img src="./img/btn_close.png" alt="닫기 버튼"></div>
+	</div>
+
+
+<!-- 메뉴 토글 -->
+<div id="main_toggle">
+	<div class="toggle_bg"></div>
+	<div class="join">
+		<ul>
+			<li><a href="#">LOGIN</a></li>
+			<li><a href="#">JOIN</a></li>
+			<li><a href="#">SHOPPING</a></li>
+		</ul>
+	</div>
+	<nav class="toggle_menu">
+		<ul>
+			<li><a href="sub1.html">MIRAGE NOIR</a>
+			 <ul>
+			 	<li><a href="sub1.html">EYE</a></li>
+			 	<li><a href="sub1.html">LIP</a></li>
+			 	<li><a href="sub1.html">FACE</a></li>
+			 </ul>
+			<li><a href="sub2.html">STROBE</a>
+			 <ul>
+			 	<li><a href="sub2.html">CREAM</a></li>
+			 	<li><a href="sub2.html">COMPACT</a></li>
+			 	<li><a href="sub2.html">SKINFINISH</a></li>
+			 </ul>
+			</li>
+			<li><a href="sub3.html">PRODUCT</a>
+			 <ul>
+			 	<li><a href="sub3.html">EYE</a></li>
+			 	<li><a href="sub3.html">LIP</a></li>
+			 	<li><a href="sub3.html">FACE</a></li>
+			 </ul>
+			</li>
+			<li><a href="sub4.html">ABOUT M·A·C</a>
+			 <ul>
+			 	<li><a href="sub4.html">M·A·C</a></li>
+			 	<li><a href="sub4.html">VIDEO</a></li>
+			 	<li><a href="sub4.html">#HASHTAG</a></li>
+			 </ul>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<!-- 타이틀 -->
+<div id="sub_title">
+	<div class="title">ABOUT M·A·C</div>
+	<p>맥의 탄생: 놀라운 시작에서 현재까지!</p>
+</div>
+<nav id="sub_menu">
+	<ul class="sub_gnb">
+	 <li>M·A·C</li>
+	 <li>VIDEO</li>
+	 <li>#HASHTAG</li>
+	</ul>
+</nav>
+</div>
+</header>
+
+<!-- 서브 내용 -->
+<a id="topBtn" href="#">▲TOP</a>
+<div class="sub_description">
+	<p class="s_title">M·A·C</p>
+	<div class="stroke"></div>
+  <p class="s_des">맥은 다양성과 개성을 존중하며, 모든 연령, 모든 인종, 모든 젠더를 지지합니다.</p>
+  <img src="./img/sub04_1.jpg" alt="맥 소개 설명1">
+</div>
+<div class="sub_description">
+	<p class="s_title">VIDEO</p>
+	<div class="stroke"></div>
+  <p class="s_des">맥의 제품을 사용한 활용만점 메이크업</p>
+  <div id="video">
+  	<div class="video">
+  		<iframe width="500" height="300" src="https://www.youtube.com/embed/fmTL4IOAVeM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  		<br>
+  		<br>
+  		<p style="font-weight: 700;">이사배의 썬키스드 메이크업</p>
+  		<br>
+  		<p>뷰티 유투버 이사배의 썬키스드 메이크업 튜토리얼을 따라해 보세요. 맥의 신제품 프로 컨실 앤 코렉트 팔레트, 프리티 이노센트 블러쉬, 롤러휠 라이너를 통해 캘리포니아 소녀가 된 듯 이국적인 메이크업을 완성할 수 있습니다! </p>
+  	</div>
+  	<div class="video">
+  		<iframe width="500" height="300" src="https://www.youtube.com/embed/URRHWHtAlXM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  		<br>
+  		<br>
+  		<p style="font-weight: 700;">럭셔리한 스킨과 다채로운 아이메이크업</p>
+  		<br>
+  		<p>시니어 아티스트 도미닉 스키너 (Dominic Skinner)는 많은 이들이 동경하는 피부표현와 아이 메이크업의 비밀을 밝힙니다.</p>
+  	</div>
+  	<div class="video">
+  		<iframe width="500" height="300" src="https://www.youtube.com/embed/9LJjGBuciaA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  		<br>
+  		<br>
+  		<p style="font-weight: 700;">강렬한 레드립 메이크업</p>
+  		<br>
+  		<p>시니어 아티스트 Katerina Ponomareva가 알려드리는 강렬한 레드 립 바르는 팁을 놓치지 마세요!</p>
+  	</div>
+  	<div class="video">
+  		<iframe width="500" height="300" src="https://www.youtube.com/embed/2hL6XzK2iig" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  		<br>
+  		<br>
+  		<p style="font-weight: 700;">Alicia Martinez의 할로윈 메이크업 ' 천상의 마녀'</p>
+  		<br>
+  		<p>천상의 마녀 룩과 함께라면 이번 할로윈은 문제 없죠. Alicia Martinez 가 연출한 이 룩을 시도해보세요!</p>
+  	</div>
+  	<div class="video">
+  		<iframe width="500" height="300" src="https://www.youtube.com/embed/LcFZRuyY-6o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  		<br>
+  		<br>
+  		<p style="font-weight: 700;">Instant Artistry - 락앤롤 스머지 아이 메이크업</p>
+  		<br>
+  		<p>Tom Sapin이 제안하는 락 스피릿 스머지 아이 메이크업을 만나보세요!</p>
+  	</div>
+  	<div class="video">
+  		<iframe width="500" height="300" src="https://www.youtube.com/embed/IEZ2fYhBkKE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  		<br>
+  		<br>
+  		<p style="font-weight: 700;">촉촉하게 파운데이션 바르기</p>
+  		<br>
+  		<p>첫번째로 프렙 + 프라임 페이스 프로텍트 로션 SPF 50을 발라주세요. 
+      그리고 빠르게 브러쉬를 활용하는 버핑 테크닉 (buffing technique)으로 스튜디오 픽스 플루이드 파운데이션을 바르면 얇고 자연스러운 피부 표현을 할 수 있습니다.</p>
+  	</div>
+  </div>
+  <button type="button"><a href="https://www.youtube.com/user/MACcosmeticsKR">더 보기</a></button>
+</div>
+<div class="sub_description">
+	<p class="s_title">#HASHTAG</p>
+	<div class="stroke"></div>
+  <p class="s_des">당신의 메이크업을 #MACCOSMETICS 해시태그와 함께 업로드 해주세요. 당신의 모습을 확인할 수 있습니다!</p>
+  <img src="./img/sub04_3.jpg" alt="해시태그 설명3">
+  <button type="button"><a href="https://www.instagram.com/maccosmetics/">더 보기</a></button>
+</div>
+
+<div style="height:100px;display:block;clear:both"></div>
+
+<!-- 푸터 -->
+<footer>
+ <div id="footer_main">
+ 	<div class="footer_logo">
+ 		<img src="./img/footer_logo.png" alt="푸터 로고">
+ 	</div>
+ 	<ul>
+  	<li><a href="#">개인정보 처리 방침</a></li>
+  	<li><a href="#">이용약관</a></li>
+  </ul>
+  <br>
+	<div class="footer_address">
+		<p>© Make-Up Art Cosmetics. All Worldwide Rights Reserved.</p>
+		<p>서울시 강남구 강남대로 382 (역삼동) 메리츠타워9층, 06232.사업자등록번호: 211-81-71889</p>
+	</div>
+ </div>
+</footer>
+</body>
+</html>

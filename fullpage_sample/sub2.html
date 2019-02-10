@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>STROBE</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script>
+$(document).ready(function(){
+	//메뉴 토글
+	$(".toggle").click(function(){
+		$(".toggle").hide();
+		$("#main_toggle").animate({right:0});
+		$(".close").show();
+	});
+	$(".close").click(function(){
+		$(".close").hide();
+		$("#main_toggle").animate({right:-750});
+		$(".toggle").show();
+	});
+
+	//서브메뉴 탭
+	$(".sub_gnb>li").eq(0).addClass("select");
+	$(".sub_description").eq(0).show();
+	$(".sub_gnb>li").click(function(){
+		$(".sub_gnb>li").removeClass();
+		$(this).addClass("select");
+		$(".sub_description").hide().eq($(this).index()).show();
+	});
+  
+  $(window).scroll(function(){
+  	var sct = $(window).scrollTop();
+  	console.log(sct);
+  	if(sct > 100){
+  		$("#logo").hide();
+  	}
+
+  	if(sct < 200){
+  		$("#logo").show();
+  	}
+  	
+  	if( $(this).scrollTop() >= 200 ){
+					$("#topBtn").fadeIn();
+				}else{
+					$("#topBtn").fadeOut();}
+				});
+			$("#topBtn").click(function(){
+					$("html,body").animate({scrollTop:0},500);
+
+  })
+
+});
+	</script>
+</head>
+<body>
+<header id="sub_header2">
+<!-- 상단 고정 메뉴 -->
+<div id="sub_top">
+	<div id="logo">
+		<div class="main_logo">
+		<a href="index.html"><h1><img src="./img/main_logo.png" alt="M·A·C"></h1></a></div>
+		<div class="toggle"><img src="./img/btn_toggle.png" alt="토글 버튼"></div>
+		<div class="close"><img src="./img/btn_close.png" alt="닫기 버튼"></div>
+	</div>
+
+
+<!-- 메뉴 토글 -->
+<div id="main_toggle">
+	<div class="toggle_bg"></div>
+	<div class="join">
+		<ul>
+			<li><a href="#">LOGIN</a></li>
+			<li><a href="#">JOIN</a></li>
+			<li><a href="#">SHOPPING</a></li>
+		</ul>
+	</div>
+	<nav class="toggle_menu">
+		<ul>
+			<li><a href="sub1.html">MIRAGE NOIR</a>
+			 <ul>
+			 	<li><a href="sub1.html">EYE</a></li>
+			 	<li><a href="sub1.html">LIP</a></li>
+			 	<li><a href="sub1.html">FACE</a></li>
+			 </ul>
+			<li><a href="sub2.html">STROBE</a>
+			 <ul>
+			 	<li><a href="sub2.html">CREAM</a></li>
+			 	<li><a href="sub2.html">COMPACT</a></li>
+			 	<li><a href="sub2.html">SKINFINISH</a></li>
+			 </ul>
+			</li>
+			<li><a href="sub3.html">PRODUCT</a>
+			 <ul>
+			 	<li><a href="sub3.html">EYE</a></li>
+			 	<li><a href="sub3.html">LIP</a></li>
+			 	<li><a href="sub3.html">FACE</a></li>
+			 </ul>
+			</li>
+			<li><a href="sub4.html">ABOUT M·A·C</a>
+			 <ul>
+			 	<li><a href="sub4.html">M·A·C</a></li>
+			 	<li><a href="sub4.html">VIDEO</a></li>
+			 	<li><a href="sub4.html">#HASHTAG</a></li>
+			 </ul>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<!-- 타이틀 -->
+<div id="sub_title">
+	<div class="title">STROBE</div>
+	<p>건조한 피부에 자연스러운 광과 수분을 책임질 스트롭 NEW 라인업을 놓치지 마세요.</p>
+</div>
+<nav id="sub_menu">
+	<ul class="sub_gnb">
+	 <li>CREAM</li>
+	 <li>COMPACT</li>
+	 <li>SKINFINISH</li>
+	</ul>
+</nav>
+</div>
+</header>
+
+<!-- 서브 내용 -->
+<a id="topBtn" href="#">▲TOP</a>
+<div class="sub_description">
+	<p class="s_title">CREAM</p>
+	<div class="stroke"></div>
+  <p class="s_des">화사하고 윤기 있는 피부를 선사해 많은 사랑을 받는 맥의 대표 메이크업 베이스</p>
+  <img src="./img/sub02_1.jpg" alt="스트롭 설명1">
+</div>
+<div class="sub_description">
+	<p class="s_title">COMPACT</p>
+	<div class="stroke"></div>
+  <p class="s_des">SPF50/PA++++에 달하는 자외선 차단 효과와 즉각적으로 피부를 밝혀줌</p>
+  <img src="./img/sub02_1.jpg" alt="스트롭 설명2">
+</div>
+<div class="sub_description">
+	<p class="s_title">SKINFINISH</p>
+	<div class="stroke"></div>
+  <p class="s_des">미세한 펄입자가 더해져 피부에 편안함과 자연스러운 광을 연출</p>
+  <img src="./img/sub02_1.jpg" alt="스트롭 설명3">
+</div>
+
+<div style="height:100px;display:block;clear:both"></div>
+
+<!-- 푸터 -->
+<footer>
+ <div id="footer_main">
+ 	<div class="footer_logo">
+ 		<img src="./img/footer_logo.png" alt="푸터 로고">
+ 	</div>
+ 	<ul>
+  	<li><a href="#">개인정보 처리 방침</a></li>
+  	<li><a href="#">이용약관</a></li>
+  </ul>
+  <br>
+	<div class="footer_address">
+		<p>© Make-Up Art Cosmetics. All Worldwide Rights Reserved.</p>
+		<p>서울시 강남구 강남대로 382 (역삼동) 메리츠타워9층, 06232.사업자등록번호: 211-81-71889</p>
+	</div>
+ </div>
+</footer>
+</body>
+</html>
