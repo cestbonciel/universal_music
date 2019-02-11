@@ -6,53 +6,18 @@
 	<title>webpage5_portf</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/fullpage.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/smhe.css" />
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/anime.min.js"></script>
+	<script src="js/smhe.js"></script>
 </head>
-<style>
-	
-</style>
-<script>
-	$(function(){
-		/*스크롤 상단메뉴*/
-		var $menu = $(".menu_container");
-		var $menuPos = $menu.offset().top;
-
-		$(window).on("scroll",function(){
-			var scrollY = window.pageYOffset;
-			console.log(scrollY);
-			if (scrollY > $menuPos) {
-				$(".menu_container").addClass("fixed fadeInDown animated");
-				$(".").addClass("");
-			}else{
-				$(".menu_container").removeClass("fixed fadeInDown animated");
-			}
-		});
-		//메뉴 토글
-			
-			$(".toggle").click(function(){
-					$(".toggle").hide();
-					$("#main_toggle").animate({right:0});
-					$(".close-but").show();
-			});
-			$(".close-but").click(function(){
-				$(".close-but").hide();
-				$("#main_toggle").animate({right:-1500});
-				$(".toggle").show();
-			});
-				
-				
-		
-	});
-
-</script>
 <body>
 	<div id="front">
 		<div class="menu_container">
-			<div class="b_leftSide"><a href="#"><img src="images/common/mt_logo.png" alt="유니버셜 로고"></a></div>
+			<div class="b_leftSide"><a href="index.html"><img src="images/common/mt_logo.png" alt="유니버셜 로고"></a></div>
 			<div class="b_rightSide toggle">
 				<ul id="bar-wrap">
 					<li class="bar1"></li>
@@ -61,9 +26,9 @@
 					<li class="m_txt">Menu</li>
 				</ul>
 			</div>
-			<div class="close-but"><img src="images/common/close-btn.png" alt="닫기 버튼"></div>
 		</div>
 		<div id="main_toggle">
+			<div class="close-but"><img src="images/common/close-btn.png" alt="닫기 버튼"></div>
 			<div class="toggle_bg">
 				<div class="newsletter_join">
 					<ul>
@@ -73,39 +38,233 @@
 					</ul>
 				</div>
 				<nav class="toggle_menu">
+					<h1 class="blind">메인메뉴</h1>
 					<ul>
-					  <li><a href="#">Artist</a></li>
-					  <li><a href="#">Playlist</a></li>
-					  <li><a href="#">News</a></li>
-					  <li><a href="#">Music&Brand</a></li>
-					  <li><a href="#">company</a></li>
+					  <li><a href="index.html">Home</a></li>
+					  <li><a href="#artist">Artist</a></li>
+					  <li><a href="#playlist">Playlist</a></li>
+					  <li><a href="#News">News</a></li>
+					  <li><a href="#Music_Brand">Music&Brand</a></li>
+					  <li><a href="#company">company</a></li>
 					</ul>
+					<div class="sns-wrap">
+						<span class="fb"></span>
+						<span class="insta"></span>
+						<span class="utube"></span>
+					</div>
 				</nav>
 			</div>
 		</div>
-		<div class="main-banner pulse animated">
-			<div class="il-wrap">
-				<p class="index-logo">
-				    <a href="#" class="main-logo"></a>
-				</p>
+		
+		
+	</div>
+
+	<div id="main_page">
+		<div id="page1" class="section 1st-page" data-anchor="company">
+			<div class="main-banner pulse animated">
+				<div class="il-wrap">
+					<p class="index-logo">
+					    <a href="#" class="main-logo"></a>
+					</p>
+				</div>
 			</div>
 		</div>
-		<div class="second-banner">
-			<div class="second_txt">
-    			<p>우리는 유니버설 뮤직그룹입니다.</p>
-  			</div>
+		<div id="page2" class="section pages" data-anchor="artist">
+		 	<div id="move2">
+			 	<div class="main2_txt">
+			 	 	<h2>Artist</h2>
+			 	</div>
+			 	<a href="#" class="more_btn">See more</a>
+			 	<div class="main2_img">
+			 		<!-- hover_plugIn -->
+			 	 	<section class="content">
+						<div class="hover-wrap">					
+							<div class="grid grid--effect-castor">
+								<div class="grid__item grid__item--c1">
+									<div class="stack">
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__figure">
+											<img class="stack__img" src="images/art_01.jpg" alt="Image"/>
+										</div>
+									</div>
+									<div class="grid__item-caption">
+										<h3 class="grid__item-title">The weeknd</h3>
+										
+										<div class="column column--right">
+											
+										</div>
+									</div>
+								</div>
+								<div class="grid__item grid__item--c2">
+									<div class="stack">
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__figure">
+											<img class="stack__img" src="images/art_02.jpg" alt="Image"/>
+										</div>
+									</div>
+									<div class="grid__item-caption">
+										<h3 class="grid__item-title">Sayy</h3>
+										<div class="column column--left">
+											
+										</div>
+										<div class="column column--right">
+											
+										</div>
+									</div>
+								</div>
+								<div class="grid__item grid__item--c3">
+									<div class="stack">
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__figure">
+											<img class="stack__img" src="images/art_03.jpg" alt="Image"/>
+										</div>
+									</div>
+									<div class="grid__item-caption">
+										<h3 class="grid__item-title">Post Malone</h3>
+										
+									</div>
+								</div>
+								<div class="grid__item grid__item--c4">
+									<div class="stack">
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__figure">
+											<img class="stack__img" src="images/art_04.jpg" alt="Image"/>
+										</div>
+									</div>
+									<div class="grid__item-caption">
+										<h3 class="grid__item-title">kendrick Lamar</h3>
+										
+									</div>
+								</div>
+							</div>
+							<div class="grid grid--effect-castor">
+								<div class="grid__item grid__item--c1">
+									<div class="stack">
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__figure">
+											<img class="stack__img" src="images/art_05.jpg" alt="Image"/>
+										</div>
+									</div>
+									<div class="grid__item-caption">
+										<h3 class="grid__item-title">Shawn Mendes</h3>
+										
+									</div>
+								</div>
+								<div class="grid__item grid__item--c2">
+									<div class="stack">
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__figure">
+											<img class="stack__img" src="images/art_06.jpg" alt="Image"/>
+										</div>
+									</div>
+									<div class="grid__item-caption">
+										<h3 class="grid__item-title">Dean</h3>
+										
+									</div>
+								</div>
+								<div class="grid__item grid__item--c3">
+									<div class="stack">
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__figure">
+											<img class="stack__img" src="images/art_07.jpg" alt="Image"/>
+										</div>
+									</div>
+									<div class="grid__item-caption">
+										<h3 class="grid__item-title">Eminem</h3>
+										
+									</div>
+								</div>
+								<div class="grid__item grid__item--c4">
+									<div class="stack">
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__deco"></div>
+										<div class="stack__figure">
+											<img class="stack__img" src="images/art_08.jpg" alt="Image"/>
+										</div>
+									</div>
+									<div class="grid__item-caption">
+										<h3 class="grid__item-title">Forestella</h3>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+			 	</div>
+			 	<div class="bottom-click">
+			 		<a href="#playlist" data-link="playlist">
+			 			<p class="b_txt">click to scroll</p>
+			 			<span class="bottom-link"><span class="bullet"></span></span>
+			 		</a>
+			 	</div>
+	 		</div>
 		</div>
+		<div id="page3" class="section pages" data-anchor="playlist">
+			
+		</div>
+		<div id="page4" class="section pages" data-anchor="News">
+			
+		</div>
+		<div id="page5" class="section pages" data-anchor="Music_Brand"></div>
+		
 	</div>
-	<!-- <header id="header">
-		<nav class="gnb-menuWrap">
-			<ul class="gnb_menu">
-				<li><a href="#">Artist</a></li>
-				<li><a href="#">Playlist</a></li>
-				<li><a href="#">News</a></li>
-				<li><a href="#">Music&Brand</a></li>
-				<li><a href="#">company</a></li>	
-			</ul>
-		</nav>
-	</header> -->
+	<script>
+	/*hover plug-in*/
+		(function() {
+			[].slice.call(document.querySelectorAll('.grid--effect-vega > .grid__item')).forEach(function(stackEl) {
+				new VegaFx(stackEl);
+			});
+			[].slice.call(document.querySelectorAll('.grid--effect-castor > .grid__item')).forEach(function(stackEl) {
+				new CastorFx(stackEl);
+			});
+			[].slice.call(document.querySelectorAll('.grid--effect-hamal > .grid__item')).forEach(function(stackEl) {
+				new HamalFx(stackEl);
+			});
+			[].slice.call(document.querySelectorAll('.grid--effect-polaris > .grid__item')).forEach(function(stackEl) {
+				new PolarisFx(stackEl);
+			});
+			[].slice.call(document.querySelectorAll('.grid--effect-alphard > .grid__item')).forEach(function(stackEl) {
+				new AlphardFx(stackEl);
+			});
+			[].slice.call(document.querySelectorAll('.grid--effect-altair > .grid__item')).forEach(function(stackEl) {
+				new AltairFx(stackEl);
+			});
+			[].slice.call(document.querySelectorAll('.grid--effect-rigel > .grid__item')).forEach(function(stackEl) {
+				new RigelFx(stackEl);
+			});
+			[].slice.call(document.querySelectorAll('.grid--effect-canopus > .grid__item')).forEach(function(stackEl) {
+				new CanopusFx(stackEl);
+			});
+			[].slice.call(document.querySelectorAll('.grid--effect-pollux > .grid__item')).forEach(function(stackEl) {
+				new PolluxFx(stackEl);
+			});
+			[].slice.call(document.querySelectorAll('.grid--effect-deneb > .grid__item')).forEach(function(stackEl) {
+				new DenebFx(stackEl);
+			});
+		})();
+	</script>
 </body>
 </html>
