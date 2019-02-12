@@ -51,6 +51,7 @@ $(function(){
 					$(".toggle").hide();
 					$("#main_toggle").animate({right:0});
 					$(".close-but").show();
+					$(".lnew_title-wrap").addClass("active")
 			});
 			$(".close-but").click(function(){
 				$(".close-but").hide();
@@ -68,4 +69,10 @@ $(function(){
 	     	$(".close-but").animate({"top":"2px"},500);
 	     	$(".close-but").animate({"top":"8px"},500);	
 			}
+			
+			$(".toggle_menu ul.toggle-gnb li a").hover(function(){
+				$(this).addClass("active")
+			},function(){
+				$(this).removeClass("active")
+			});
 	});
