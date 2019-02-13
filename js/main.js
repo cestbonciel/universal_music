@@ -1,5 +1,7 @@
 $(function(){
 		//메인 풀페이지
+
+
 		$("#main_page").fullpage({
 				links:["company","artist","playlist","News","Music_Brand"],
 				anchors:["company","artist","playlist","News","Music_Brand"],
@@ -7,16 +9,18 @@ $(function(){
 				'afterLoad': function(anchorLink, index){
 					if(index == 1){
 						$('.index-logo,.main1_img').addClass('bounceIn animated');
+
 						
 					}else{
 						$('.index-logo,.main1_img').removeClass('bounceIn animated');
-					
+						$('.play-slider').css({"display":"block"});
 					}
 
 					if(index == 2){
+						
 						$('.main2_txt').addClass('mactive');
 					}else{$('.main2_txt').removeClass('mactive');}
-
+						  
 					if(index == 3){
 						$('.main3_txt').addClass('mactive');
 					}else{$('.main3_txt').removeClass('mactive');}
