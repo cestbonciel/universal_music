@@ -8,12 +8,38 @@
 	<link rel="stylesheet" href="css/fullpage.css">
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/smhe.css" />
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/anime.min.js"></script>
 	<script src="js/smhe.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
 </head>
+<script>
+	$(function(){
+		var playslider = $(".play-slider").bxSlider({
+			mode:'vertical',
+			auto:true,
+			controls:false,
+			slideWidth:900,
+			// slideMargin:50,
+			pager:false,
+			minSlides:5,
+			maxSlides:5,
+			moveSlides:1,
+			autoHover:true
+		});
+			$('#prevBtn').on('click',function(){
+				mySlider.goToPrevSlide();
+			});
+			$('#nextBtn').on('click',function(){
+				mySlider.goToNextSlide();
+			});
+	});
+
+</script>
 <body>
 	<div id="front">
 		<div class="menu_container">
@@ -250,7 +276,160 @@
 	 		</div>
 		</div>
 		<div id="page3" class="section pages" data-anchor="playlist">
-			
+			<div id="move3">
+			 	<div class="main3_txt">
+			 	 	<h2>playlist</h2>
+			 	</div>		 	
+			 	<div class="main3_img">
+			 		<div class="play-slider">
+			 			<ul class="uni_playlist">
+			 				<li class="clearfix">
+			 					<div class="alb-wrap or1">
+			 						<div class="ab-img" style="width:25%;float:left;" align="center">
+			 							<img src="images/playlist/01_sglewis.jpg" alt="곡정보1">
+			 						</div>
+		 							<div class="ab-title" style="width:25%;float:left;" align="center">
+		 								<h3>[Title]<br><span>Smart Aleck Kill<br>(Feat. Col3trane)</span></h3>
+		 							</div>
+		 							<div class="ab-ati" style="width:25%;float:left;" align="center"><span>[Artist]</span><br>SG Lewis</div>
+		 							<div class="ab-abtit" style="width:25%;float:left;" align="center"><span>[Album]</span>Smart Aleck Kill<br>
+		 							<i class="fas fa-headphones-alt"></i>
+		 							</div>
+			 					</div>
+			 					<div class="alb-wrap or2">
+			 						<div class="ab-img" style="width:25%;float:left;" align="center">
+			 							<img src="images/playlist/01_sglewis.jpg" alt="곡정보1">
+			 						</div>
+		 							<div class="ab-title" style="width:25%;float:left;" align="center">
+		 								<h3>[Title]<br><span>Smart Aleck Kill<br>(Feat. Col3trane)</span></h3>
+		 							</div>
+		 							<div class="ab-ati" style="width:25%;float:left;" align="center"><span>[Artist]</span><br>SG Lewis</div>
+		 							<div class="ab-abtit" style="width:25%;float:left;" align="center">
+			 							<span>[Album]</span>Smart Aleck Kill<br>
+			 							<i class="fas fa-headphones-alt"></i>
+		 							</div>
+			 					</div>
+			 				</li>
+			 				<li class="clearfix">
+			 					<div class="alb-wrap or1">
+			 						<div class="ab-img" style="width:25%;float:left;" align="center">
+			 							<img src="images/playlist/01_sglewis.jpg" alt="곡정보1">
+			 						</div>
+		 							<div class="ab-title" style="width:25%;float:left;" align="center">
+		 								<h3>[Title]<br><span>Smart Aleck Kill<br>(Feat. Col3trane)</span></h3>
+		 							</div>
+		 							<div class="ab-ati" style="width:25%;float:left;" align="center"><span>[Artist]</span><br>SG Lewis</div>
+		 							<div class="ab-abtit" style="width:25%;float:left;" align="center"><span>[Album]</span>Smart Aleck Kill<br>
+		 							<i class="fas fa-headphones-alt"></i>
+		 							</div>
+			 					</div>
+			 					<div class="alb-wrap or2">
+			 						<div class="ab-img" style="width:25%;float:left;" align="center">
+			 							<img src="images/playlist/01_sglewis.jpg" alt="곡정보1">
+			 						</div>
+		 							<div class="ab-title" style="width:25%;float:left;" align="center">
+		 								<h3>[Title]<br><span>Smart Aleck Kill<br>(Feat. Col3trane)</span></h3>
+		 							</div>
+		 							<div class="ab-ati" style="width:25%;float:left;" align="center"><span>[Artist]</span><br>SG Lewis</div>
+		 							<div class="ab-abtit" style="width:25%;float:left;" align="center">
+			 							<span>[Album]</span>Smart Aleck Kill<br>
+			 							<i class="fas fa-headphones-alt"></i>
+		 							</div>
+			 					</div>
+			 				</li>
+			 				<li class="clearfix">
+			 					<div class="alb-wrap or1">
+			 						<div class="ab-img" style="width:25%;float:left;" align="center">
+			 							<img src="images/playlist/01_sglewis.jpg" alt="곡정보1">
+			 						</div>
+		 							<div class="ab-title" style="width:25%;float:left;" align="center">
+		 								<h3>[Title]<br><span>Smart Aleck Kill<br>(Feat. Col3trane)</span></h3>
+		 							</div>
+		 							<div class="ab-ati" style="width:25%;float:left;" align="center"><span>[Artist]</span><br>SG Lewis</div>
+		 							<div class="ab-abtit" style="width:25%;float:left;" align="center"><span>[Album]</span>Smart Aleck Kill<br>
+		 							<i class="fas fa-headphones-alt"></i>
+		 							</div>
+			 					</div>
+			 					<div class="alb-wrap or2">
+			 						<div class="ab-img" style="width:25%;float:left;" align="center">
+			 							<img src="images/playlist/01_sglewis.jpg" alt="곡정보1">
+			 						</div>
+		 							<div class="ab-title" style="width:25%;float:left;" align="center">
+		 								<h3>[Title]<br><span>Smart Aleck Kill<br>(Feat. Col3trane)</span></h3>
+		 							</div>
+		 							<div class="ab-ati" style="width:25%;float:left;" align="center"><span>[Artist]</span><br>SG Lewis</div>
+		 							<div class="ab-abtit" style="width:25%;float:left;" align="center">
+			 							<span>[Album]</span>Smart Aleck Kill<br>
+			 							<i class="fas fa-headphones-alt"></i>
+		 							</div>
+			 					</div>
+			 				</li>
+			 				<li class="clearfix">
+			 					<div class="alb-wrap or1">
+			 						<div class="ab-img" style="width:25%;float:left;" align="center">
+			 							<img src="images/playlist/01_sglewis.jpg" alt="곡정보1">
+			 						</div>
+		 							<div class="ab-title" style="width:25%;float:left;" align="center">
+		 								<h3>[Title]<br><span>Smart Aleck Kill<br>(Feat. Col3trane)</span></h3>
+		 							</div>
+		 							<div class="ab-ati" style="width:25%;float:left;" align="center"><span>[Artist]</span><br>SG Lewis</div>
+		 							<div class="ab-abtit" style="width:25%;float:left;" align="center"><span>[Album]</span>Smart Aleck Kill<br>
+		 							<i class="fas fa-headphones-alt"></i>
+		 							</div>
+			 					</div>
+			 					<div class="alb-wrap or2">
+			 						<div class="ab-img" style="width:25%;float:left;" align="center">
+			 							<img src="images/playlist/01_sglewis.jpg" alt="곡정보1">
+			 						</div>
+		 							<div class="ab-title" style="width:25%;float:left;" align="center">
+		 								<h3>[Title]<br><span>Smart Aleck Kill<br>(Feat. Col3trane)</span></h3>
+		 							</div>
+		 							<div class="ab-ati" style="width:25%;float:left;" align="center"><span>[Artist]</span><br>SG Lewis</div>
+		 							<div class="ab-abtit" style="width:25%;float:left;" align="center">
+			 							<span>[Album]</span>Smart Aleck Kill<br>
+			 							<i class="fas fa-headphones-alt"></i>
+		 							</div>
+			 					</div>
+			 				</li>
+			 				<li class="clearfix">
+			 					<div class="alb-wrap or1">
+			 						<div class="ab-img" style="width:25%;float:left;" align="center">
+			 							<img src="images/playlist/01_sglewis.jpg" alt="곡정보1">
+			 						</div>
+		 							<div class="ab-title" style="width:25%;float:left;" align="center">
+		 								<h3>[Title]<br><span>Smart Aleck Kill<br>(Feat. Col3trane)</span></h3>
+		 							</div>
+		 							<div class="ab-ati" style="width:25%;float:left;" align="center"><span>[Artist]</span><br>SG Lewis</div>
+		 							<div class="ab-abtit" style="width:25%;float:left;" align="center"><span>[Album]</span>Smart Aleck Kill<br>
+		 							<i class="fas fa-headphones-alt"></i>
+		 							</div>
+			 					</div>
+			 					<div class="alb-wrap or2">
+			 						<div class="ab-img" style="width:25%;float:left;" align="center">
+			 							<img src="images/playlist/01_sglewis.jpg" alt="곡정보1">
+			 						</div>
+		 							<div class="ab-title" style="width:25%;float:left;" align="center">
+		 								<h3>[Title]<br><span>Smart Aleck Kill<br>(Feat. Col3trane)</span></h3>
+		 							</div>
+		 							<div class="ab-ati" style="width:25%;float:left;" align="center"><span>[Artist]</span><br>SG Lewis</div>
+		 							<div class="ab-abtit" style="width:25%;float:left;" align="center">
+			 							<span>[Album]</span>Smart Aleck Kill<br>
+			 							<i class="fas fa-headphones-alt"></i>
+		 							</div>
+			 					</div>
+			 				</li>
+			 			</ul>
+			 			<div id="prevBtn"><a href="#"></a></div>
+						<div id="nextBtn"><a href="#"></a></div>
+			 		</div>
+			 	</div>
+			 	<div class="bottom-click">
+			 		<a href="#News" data-link="News">
+			 			<p class="b_txt">click to scroll</p>
+			 			<span class="bottom-link"><span class="bullet"></span></span>
+			 		</a>
+			 	</div>
+	 		</div>
 		</div>
 		<div id="page4" class="section pages" data-anchor="News">
 			

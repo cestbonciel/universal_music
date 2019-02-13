@@ -18,8 +18,8 @@ $(function(){
 					}else{$('.main2_txt').removeClass('mactive');}
 
 					if(index == 3){
-						$('.main3_txt,.main3_img').addClass('mactive');
-					}else{$('.main3_txt,.main3_img').removeClass('mactive');}
+						$('.main3_txt').addClass('mactive');
+					}else{$('.main3_txt').removeClass('mactive');}
 
 					if(index == 4){
 						$('.main4_txt').addClass('mactive');
